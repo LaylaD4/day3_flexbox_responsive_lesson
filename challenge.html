@@ -4,19 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Challenge</title>
+    <!-- To create two images that sit side by side, and then when the screen width
+    gets below 700px those two images then stack on top of each other. You could use
+    the {flex-direction: row;} then use a media breakpoint and specify: {flex-direction: column} 
+    at max-width: 700px. However easier to use simply: {flex-wrap: wrap;} and then the
+    media breakpoint; as it stops the elements from 'squishing' if too large when you shrink 
+    the page, also; less code to type.-->
+    <title>Challenge</title> 
     <style>
-       .container {
-           width: 100%;
-           height: 100%;
-           display: flex;
-           flex-wrap: wrap;}
-     </style>
+       
+        .container {
+          width: 100%;
+          background: salmon;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+            }
+
+       
+        .pic {
+          width: 400px;
+          height: 400px;
+          margin: 10px;}
+
+/* when screen size is smaller than 700px, change */
+        @media screen and (max-width: 700px) {
+        .container {
+          width: 100%;
+          background: black;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: center; }
+            }
+           
+    </style>
+
 </head>
 <body>
     <div class="container">
-    <img src="img/kitten.jpeg" alt="kitten" class="one">
-    <img src="img/kitten.jpeg" alt="kitten" class="two">
+      <img src="img/kitten.jpeg" alt="kitten" class="pic">
+      <img src="img/kitten.jpeg" alt="kitten" class="pic">
     </div>
 
 </body>

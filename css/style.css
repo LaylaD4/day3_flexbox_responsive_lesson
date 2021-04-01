@@ -1,0 +1,39 @@
+/* main axis= x axis (horizontal), cross axis= y axis (vertical). flex-direction is 
+by default set to row (horizontal), and to change set to: column (vertical).
+Also important to note that justify-content works on x axis, and depending on
+your setting of flex-direction: row/column;  align-items works on the y axis
+depending on what flex-direction: row/column; Also using align-items: stretch; if you are set to
+flex-direction: row; you must not have a height setting in child element, and vice 
+versa for column/width */
+
+.container {
+    width: 100%;
+    height: 1000px;
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    /* justify-content: space-between; */
+    /* align-items: stretch; */
+    /* align-content: center; */
+
+}
+
+.box {
+    width: 100px; 
+    height: 100px;
+    background-color: aqua;
+    margin: 10px;
+    
+}
+
+.box1 {
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    margin: 10px;
+    order: 5;
+    flex-grow: 2;
+    align-items: center;
+    align-self: flex-end;
+}
